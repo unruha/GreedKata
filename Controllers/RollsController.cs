@@ -11,10 +11,10 @@ namespace GreedKata.Controllers
     public class RollsController : ControllerBase
     {
         // GET: api/<RollsController>
-        [HttpGet("values")]
-        public IEnumerable<string> Get()
+        [HttpGet("randomRoll")]
+        public IEnumerable<int> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new int[] { 4, 3, 6, 1, 1 };
         }
 
         // GET api/<RollsController>/5
