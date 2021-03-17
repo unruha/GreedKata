@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dH1jvKVYoiL9Ov1SIamCDHBpj7kW4huHjyzDkrXYgmgklEIK7RWpOtbe2M/MAOs/zfdiwRDlBcEPVo2Kq9Pkzw==",
+  "dgSpecHash": "SykEN9oc4t/B2RGMRZNym7KqHCu5QtZkHixSMu4/Z9S7KwoWm/nTyz2zaPaD85PZdHoB8EUmE3MTDNQIVnHoEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adrian\\source\\repos\\GreedKata\\GreedKata.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Adrian\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

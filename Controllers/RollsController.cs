@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using GreedKata.Models;
+using Newtonsoft.Json.Linq;
 
 namespace GreedKata.Controllers
 {
@@ -12,9 +15,19 @@ namespace GreedKata.Controllers
     {
         // GET: api/<RollsController>
         [HttpGet("randomRoll")]
-        public IEnumerable<int> Get()
+        public IActionResult Get()
         {
-            return new int[] { 4, 3, 6, 1, 1 };
+            Roll roll = new Roll();
+            roll.rollDiceRandom();
+            roll.calculateScore();
+
+            JArray diceNumsJson = new JArray(roll.getDiceNumbers());
+
+            var jsonRollObj = new JObject();
+            jsonRollObj.Add("Score", roll.getScore());
+            jsonRollObj.Add("DiceNumbers", diceNumsJson);
+
+            return Content(jsonRollObj.ToString(), "application/json");
         }
 
         // GET api/<RollsController>/5

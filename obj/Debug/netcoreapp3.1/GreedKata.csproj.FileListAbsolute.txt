@@ -18,3 +18,5 @@ C:\Users\Adrian\source\repos\GreedKata\obj\Debug\netcoreapp3.1\GreedKata.RazorTa
 C:\Users\Adrian\source\repos\GreedKata\obj\Debug\netcoreapp3.1\GreedKata.dll
 C:\Users\Adrian\source\repos\GreedKata\obj\Debug\netcoreapp3.1\GreedKata.pdb
 C:\Users\Adrian\source\repos\GreedKata\obj\Debug\netcoreapp3.1\GreedKata.genruntimeconfig.cache
+C:\Users\Adrian\source\repos\GreedKata\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Adrian\source\repos\GreedKata\obj\Debug\netcoreapp3.1\GreedKata.csproj.CopyComplete

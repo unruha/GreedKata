@@ -8,11 +8,25 @@ namespace GreedKata.Models
     public class Roll
     {
         // represents the score obtained by the dice rolls
-        private int score { get; set; }
+        private int score;
 
         // represents the values of the dice rolls
-        private int[] diceNumbers { get; set; }
+        private int[] diceNumbers;
+
+        public int getScore()
+        {
+            return score;
+        }
+
+        public int[] getDiceNumbers()
+        {
+            return diceNumbers;
+        }
         
+        public void setDiceNumbers(int[] nums)
+        {
+            diceNumbers = nums;
+        }
 
         // gets random values for each of the 5 dice rolls and stores them in the diceNumbers class variable
         public void rollDiceRandom()
