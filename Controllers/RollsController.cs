@@ -13,7 +13,7 @@ namespace GreedKata.Controllers
     [ApiController]
     public class RollsController : ControllerBase
     {
-        // GET: api/<RollsController>
+        // GET: api/rolls/randomRoll
         [HttpGet("randomRoll")]
         public IActionResult Get()
         {
@@ -30,29 +30,22 @@ namespace GreedKata.Controllers
             return Content(jsonRollObj.ToString(), "application/json");
         }
 
-        // GET api/<RollsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // POST api/rolls/rollValues
+        [HttpPost("rollValues")]
+        public IActionResult Post([FromBody] RollTemplate rollTemplate)
         {
-            return "value";
-        }
+            Roll roll = new Roll();
 
-        // POST api/<RollsController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+            roll.setDiceNumbers(rollTemplate.diceNumbers);
+            roll.calculateScore();
 
-        // PUT api/<RollsController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+            JArray diceNumsJson = new JArray(roll.getDiceNumbers());
 
-        // DELETE api/<RollsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var jsonRollObj = new JObject();
+            jsonRollObj.Add("Score", roll.getScore());
+            jsonRollObj.Add("DiceNumbers", diceNumsJson);
+
+            return Content(jsonRollObj.ToString(), "application/json");
         }
     }
 }
