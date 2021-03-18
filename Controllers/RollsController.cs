@@ -21,8 +21,10 @@ namespace GreedKata.Controllers
             roll.rollDiceRandom();
             roll.calculateScore();
 
+            // create json array so that it can be returned in json format
             JArray diceNumsJson = new JArray(roll.getDiceNumbers());
 
+            // create json object to return roll values in json format to user
             var jsonRollObj = new JObject();
             jsonRollObj.Add("Score", roll.getScore());
             jsonRollObj.Add("DiceNumbers", diceNumsJson);
@@ -35,12 +37,14 @@ namespace GreedKata.Controllers
         public IActionResult Post([FromBody] RollTemplate rollTemplate)
         {
             Roll roll = new Roll();
-
+            // set the dice roll values to the values passed in through the body
             roll.setDiceNumbers(rollTemplate.diceNumbers);
             roll.calculateScore();
 
+            // create json array to return json format to user
             JArray diceNumsJson = new JArray(roll.getDiceNumbers());
 
+            // create json object to return json format to user
             var jsonRollObj = new JObject();
             jsonRollObj.Add("Score", roll.getScore());
             jsonRollObj.Add("DiceNumbers", diceNumsJson);
