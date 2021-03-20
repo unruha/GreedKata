@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using GreedKata.Models;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Cors;
 
 namespace GreedKata.Controllers
 {
