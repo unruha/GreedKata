@@ -1,5 +1,12 @@
 # GreedKata
 
+## Description
+```
+An ASP.NET Core service that provides score calculation functionality. One API gets a roll with 5 random
+values and calculates the score. the second API takes in 5 roll values and returns the calculated score
+to the user.
+```
+
 ## Alaska Airlines Coding Exercise Prompt
 ```
 Questions you came up with:
